@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar&family=Lato:wght@300&family=Neuton&family=Oswald&family=Roboto:wght@300;400&display=swap');
 
-/*Set Global properties&*/
+
+/*Set global properties*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* Body properties, with max-width to limit the size of the game */
 body {
     font-family: 'Roboto', serif;
     max-width: 800px;
@@ -19,6 +22,24 @@ body {
     justify-content: center;
     align-items: center;
 }
+.container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*Set properties for the images */
+
+#globe {
+    height: 100px;
+    width: auto;
+    margin-right:-15px;
+}
+.beer {
+    height: 40px;
+    width: auto;
+    padding: 5%;
+}
+
+
 /* Headings */
 h1 {
     text-align: center;
@@ -32,15 +53,14 @@ h2 {
     letter-spacing: 1px;
 }
 
-/*Image Properties */
+/* Score area and free-play icons */
+.score-area {
+    column-gap: 5%;
+    background:#2E7CB5;
+}
+#pints-div,
+.level-box,
+.score-box {
+    display: flex;
+}
 
-#globe {
-    height: 100px;
-    width: auto;
-    margin-right:-15px;
-}
-.beer {
-    height: 40px;
-    width: auto;
-    padding: 5%;
-}

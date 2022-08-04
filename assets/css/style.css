@@ -140,3 +140,11 @@ h2 {
     transform: scale(1.05);
     box-shadow: 0 0 10px 2px;
 }
+/* Start over link */
+#start-over {
+    text-decoration: none;
+    color: #075c8a;
+}
+#start-over:hover {
+    color: green;
+}

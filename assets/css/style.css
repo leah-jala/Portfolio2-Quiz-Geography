@@ -31,3 +31,11 @@ h2 {
     color: #ffffff;
     letter-spacing: 1px;
 }
+
+/*Image Properties */
+
+#globe {
+    height: 100px;
+    width: auto;
+    margin-right:-15px;
+}

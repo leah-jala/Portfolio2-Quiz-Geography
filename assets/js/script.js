@@ -286,9 +286,13 @@ const userMessage = document.getElementById("user-message");
 const questionText = document.getElementById('question-text');
 const startOver = document.getElementById('start-over');
 let answers = document.getElementById('answers');
+//Global varibles
+let answerStatus;
+let rightButton;
+let rightAnswer;
 
 //Set indices to zero for each new game
-let questionIndex = 0;
+let questionIndex = 13;
 let capitalQuestionIndex = 0;
 let riverQuestionIndex = 0;
 let triviaQuestionIndex = 0; 
@@ -316,11 +320,28 @@ beginGameBtn.addEventListener('click', runQuiz);
     questionIndex++;
 }
 
-function addQuestion(){
+/**
+ * Adds a question to game after deciding which set to use. Calls functions
+ * to shuffle the questions and to insert the answers.
+ */
+ function addQuestion() {
+    
+    //Decide which set of questions to choose
     if (questionIndex < 5) {
-        document.getElementById("theme").innerHtml = "1: Capitals";
+        document.getElementById("theme").innerText = "1: Capitals";
         answers.innerHTML = "";
         questionText.innerHTML = questions[capitalQuestionIndex].question;
         capitalQuestionIndex++;
+    } else if (questionIndex >= 5 && questionIndex <10) {
+        document.getElementById("theme").innerText = " 2: Rivers";
+        answers.innerHTML = "";
+        questionText.innerHTML = riverQuestions[riverQuestionIndex].question;
+        riverQuestionIndex++;
+    } else if (questionIndex >= 10 && questionIndex <15) {
+        document.getElementById("theme").innerText = " 3: Trivia";
+        answers.innerHTML = "";
+        questionText.innerHTML = triviaQuestions[triviaQuestionIndex].question;
+        triviaQuestionIndex++;
     }
 }
+

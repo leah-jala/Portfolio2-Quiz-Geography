@@ -305,5 +305,17 @@ beginGameBtn.addEventListener('click', runQuiz);
  */ 
 
  function runQuiz(){
-   console.log("game started");
+    //Set page to start - hide buttons and user message
+    userMessage.classList.add("hide");
+    beginGameBtn.classList.add('hide');
+    startOver.classList.add('hide');
+    //insert questions and answers
+    beginGameBtn.innerText = "Next Question";
+    answers.classList.remove('hide');
+    questionIndex++;
+}
+
+function addQuestion(){
+    console.log("A question will go here");
+    console.log("question # : ", questionIndex);
 }

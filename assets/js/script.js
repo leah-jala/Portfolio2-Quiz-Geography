@@ -310,6 +310,7 @@ beginGameBtn.addEventListener('click', runQuiz);
     beginGameBtn.classList.add('hide');
     startOver.classList.add('hide');
     //insert questions and answers
+    addQuestion();
     beginGameBtn.innerText = "Next Question";
     answers.classList.remove('hide');
     questionIndex++;

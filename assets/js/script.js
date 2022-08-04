@@ -286,6 +286,7 @@ const userMessage = document.getElementById("user-message");
 const questionText = document.getElementById('question-text');
 const startOver = document.getElementById('start-over');
 let answers = document.getElementById('answers');
+let theme = document.getElementById('theme');
 //Global varibles
 let answerStatus;
 let rightButton;
@@ -336,10 +337,12 @@ beginGameBtn.addEventListener('click', runQuiz);
     } else if (questionIndex >= 5 && questionIndex <10) {
         document.getElementById("theme").innerText = " 2: Rivers";
         questionText.innerHTML = riverQuestions[riverQuestionIndex].question;
+        insertAnswers();
         riverQuestionIndex++;
     } else if (questionIndex >= 10 && questionIndex <15) {
         document.getElementById("theme").innerText = " 3: Trivia";
         questionText.innerHTML = triviaQuestions[triviaQuestionIndex].question;
+        insertAnswers();
         triviaQuestionIndex++;
     } else {
         gameOver();
@@ -401,8 +404,45 @@ beginGameBtn.addEventListener('click', runQuiz);
         currentButton.classList.remove('btn');
         currentButton.classList.add('btn-no-hover');
     }  
+    if (userAnswer != rightAnswer){
+        win = "false"
+        wrongAnswers++;
+    } else if (userAnswer === rightAnswer) {
+        win = true;
+    }
+    if (win === true) {
+        userButton.style.background = "green";
+        let oldScore = parseInt(document.getElementById("score").innerText);
+        document.getElementById("score").innerText = ++oldScore;
+    } else if (win != true) {
+        userButton.style.background = "red";
+        rightButton.style.background = "green";
+        emptyBeer();
+    }
+    if (wrongAnswers != 3) {
+        beginGameBtn.classList.remove('hide');
+    }
+ }
+ /**
+ * Replaces full beer image with empty beer image based on number of 
+ * wrong answers. 
+ */
+function emptyBeer() {
+    console.log(wrongAnswers);
+    if (wrongAnswers === 1) {
+        document.getElementById('pint3').src = "assets/images/beer-empty.webp";
+        document.getElementById('pint3').alt = "An image of an empty beer pint.";
+    }
+    if (wrongAnswers === 2) {
+        document.getElementById('pint2').src = "assets/images/beer-empty.webp";
+        document.getElementById('pint2').alt = "An image of an empty beer pint.";
+    }
+    if (wrongAnswers === 3) {
+        document.getElementById('pint1').src = "assets/images/beer-empty.webp";
+        document.getElementById('pint1').alt = "An image of an empty beer pint.";
+        setTimeout(gameOver, 1500);
+    }
 }
-
 /**
  * Clears the answers from screen, makes start over link available and gives
  * the user a message once the game is over. 

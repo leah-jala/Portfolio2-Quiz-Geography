@@ -317,6 +317,10 @@ beginGameBtn.addEventListener('click', runQuiz);
 }
 
 function addQuestion(){
-    console.log("A question will go here");
-    console.log("question # : ", questionIndex);
+    if (questionIndex < 5) {
+        document.getElementById("theme").innerHtml = "1: Capitals";
+        answers.innerHTML = "";
+        questionText.innerHTML = questions[capitalQuestionIndex].question;
+        capitalQuestionIndex++;
+    }
 }

@@ -116,3 +116,27 @@ h2 {
     font-size: 1.2em;
     cursor: pointer;
 }
+
+/* Next question (and start game) button */
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+#next-btn {
+    background-color: green;
+    color: white;width: 150px;
+    padding:10px;
+    margin: 5px 10px;
+    border-radius: 8px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+#next-btn:hover {
+    border: solid;
+    border-color: rgb(155, 228, 155);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 2px;
+}

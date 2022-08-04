@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar&family=Lato:wght@300&family=Neuton&family=Oswald&family=Roboto:wght@300;400&display=swap');
+
 /*Set Global properties&*/
 * {
     box-sizing: border-box;
@@ -16,4 +18,16 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+/* Headings */
+h1 {
+    text-align: center;
+    color: #28722d;
+    font-size: 2em;
+    padding: 0 10px;
+}
+h2 {
+    font-size: 1.1em;
+    color: #ffffff;
+    letter-spacing: 1px;
 }

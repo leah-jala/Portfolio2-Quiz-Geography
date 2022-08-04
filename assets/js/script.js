@@ -414,13 +414,13 @@ beginGameBtn.addEventListener('click', runQuiz);
 
     if (win === true) {
         userButton.style.background = "green";
-        userMessage.innerText = "That's right!"
+        resultMessage.innerText = "That's right!"
         let oldScore = parseInt(document.getElementById("score").innerText);
         document.getElementById("score").innerText = ++oldScore;
     } else if (win != true) {
         userButton.style.background = "red";
         rightButton.style.background = "green";
-        userMessage.innerText = "Oops! Try again!"
+        resultMessage.innerText = "Oops! Try again!"
         emptyBeer();
     }
     if (wrongAnswers != 3) {

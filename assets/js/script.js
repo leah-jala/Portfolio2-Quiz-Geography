@@ -292,7 +292,7 @@ let rightButton;
 let rightAnswer;
 
 //Set indices to zero for each new game
-let questionIndex = 15;
+let questionIndex = 0;
 let capitalQuestionIndex = 0;
 let riverQuestionIndex = 0;
 let triviaQuestionIndex = 0; 
@@ -314,9 +314,9 @@ beginGameBtn.addEventListener('click', runQuiz);
     beginGameBtn.classList.add('hide');
     startOver.classList.add('hide');
     //insert questions and answers
-    addQuestion();
     beginGameBtn.innerText = "Next Question";
     answers.classList.remove('hide');
+    addQuestion();
     questionIndex++;
 }
 
@@ -325,26 +325,68 @@ beginGameBtn.addEventListener('click', runQuiz);
  * to shuffle the questions and to insert the answers.
  */
  function addQuestion() {
-    
+    answers.innerHTML = "";
+
     //Decide which set of questions to choose
     if (questionIndex < 5) {
         document.getElementById("theme").innerText = "1: Capitals";
-        answers.innerHTML = "";
         questionText.innerHTML = questions[capitalQuestionIndex].question;
+        insertAnswers();
         capitalQuestionIndex++;
     } else if (questionIndex >= 5 && questionIndex <10) {
         document.getElementById("theme").innerText = " 2: Rivers";
-        answers.innerHTML = "";
         questionText.innerHTML = riverQuestions[riverQuestionIndex].question;
         riverQuestionIndex++;
     } else if (questionIndex >= 10 && questionIndex <15) {
         document.getElementById("theme").innerText = " 3: Trivia";
-        answers.innerHTML = "";
         questionText.innerHTML = triviaQuestions[triviaQuestionIndex].question;
         triviaQuestionIndex++;
     } else {
         gameOver();
     }
+}
+
+/**
+ * Fetches the answer choices corresponding to the current question, and
+ * appends an button containing the answer text.
+ * Identifies and stores the correct answer. 
+ */
+ function insertAnswers() {
+    let btnText;
+    userMessage.classList.add('hide');
+    for (let i=0; i <4; i++) {
+        //store new button in variable
+        let newBtn = document.createElement('button');
+        //Use the index to find the correct question array and determine if answers are true or false
+        if (capitalQuestionIndex <5) {
+            btnText = questions[capitalQuestionIndex].answers[i].text;
+            answerStatus = questions[capitalQuestionIndex].answers[i].correct;
+        } else if (capitalQuestionIndex >= 5 && riverQuestionIndex < 5){
+            btnText = riverQuestions[riverQuestionIndex].answers[i].text;
+            answerStatus = riverQuestions[riverQuestionIndex].answers[i].correct;
+        } else if (riverQuestionIndex >= 5 &&  triviaQuestionIndex < 5) {
+            btnText = triviaQuestions[triviaQuestionIndex].answers[i].text;
+            answerStatus = triviaQuestions[triviaQuestionIndex].answers[i].correct;
+        }
+        //Insert answer text in button and add .btn class
+        newBtn.innerText = btnText;
+        newBtn.classList.add('btn');
+        //Ensure button can be clicked by the user
+        newBtn.disabled = false;
+        //Set the data attribute
+        newBtn.dataset.correct = answerStatus;
+        if (answerStatus === true) {
+            rightAnswer = btnText;
+            rightButton = newBtn;
+        }
+        //Add event listener to button and append to the quiz
+        newBtn.addEventListener('click', findUserAnswer);
+        answers.appendChild(newBtn);
+    }
+}
+
+function findUserAnswer(e) {
+    console.log("userAnswer");
 }
 
 /**

@@ -11,3 +11,9 @@ body {
     border: solid;
     border-color: #64BB6A;
 }
+.heading, .score-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

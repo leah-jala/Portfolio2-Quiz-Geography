@@ -148,3 +148,9 @@ h2 {
 #start-over:hover {
     color: green;
 }
+/* Hide properties */
+.hide,
+#answers.hide,
+#start-over.hide {
+    display: none;
+}

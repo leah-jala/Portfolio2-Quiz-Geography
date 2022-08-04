@@ -292,7 +292,7 @@ let rightButton;
 let rightAnswer;
 
 //Set indices to zero for each new game
-let questionIndex = 13;
+let questionIndex = 15;
 let capitalQuestionIndex = 0;
 let riverQuestionIndex = 0;
 let triviaQuestionIndex = 0; 
@@ -342,6 +342,25 @@ beginGameBtn.addEventListener('click', runQuiz);
         answers.innerHTML = "";
         questionText.innerHTML = triviaQuestions[triviaQuestionIndex].question;
         triviaQuestionIndex++;
+    } else {
+        gameOver();
     }
 }
 
+/**
+ * Clears the answers from screen, makes start over link available and gives
+ * the user a message once the game is over. 
+ */
+ function gameOver() {
+    answers.innerHTML = "";
+    if (wrongAnswers === 0) {
+        questionText.innerHTML = "Amazing result! Please be on my team!";
+    } else {
+        questionText.innerHTML = "Game Over! Thanks for playing!";
+        if (questionIndex < 8) {
+        userMessage.innerText = "Play again to improve your score.";
+        } 
+    }
+    startOver.classList.remove('hide');
+    beginGameBtn.classList.add('hide'); 
+}

@@ -148,6 +148,11 @@ h2 {
 #start-over:hover {
     color: green;
 }
+/* Footer */
+footer {
+    text-align: center;
+    margin: 10px 0;
+}
 /* Hide properties */
 .hide,
 #answers.hide,

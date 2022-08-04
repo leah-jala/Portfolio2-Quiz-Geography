@@ -104,7 +104,7 @@ let riverQuestions = [
         ]
     },
     {
-        question: "How much of the world's water is held by rivers? Source: National Geogrpahic Kids", 
+        question: "How much of the world's water is held by rivers? Source: National Geograpahic Kids", 
         answers: [
             {text: "1%", correct: true},
             {text: "5%", correct: false},
@@ -405,18 +405,22 @@ beginGameBtn.addEventListener('click', runQuiz);
         currentButton.classList.add('btn-no-hover');
     }  
     if (userAnswer != rightAnswer){
-        win = "false"
+        win = false;
         wrongAnswers++;
     } else if (userAnswer === rightAnswer) {
         win = true;
     }
+    userMessage.classList.remove('hide');
+
     if (win === true) {
         userButton.style.background = "green";
+        userMessage.innerText = "That's right!"
         let oldScore = parseInt(document.getElementById("score").innerText);
         document.getElementById("score").innerText = ++oldScore;
     } else if (win != true) {
         userButton.style.background = "red";
         rightButton.style.background = "green";
+        userMessage.innerText = "Oops! Try again!"
         emptyBeer();
     }
     if (wrongAnswers != 3) {

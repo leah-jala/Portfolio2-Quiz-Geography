@@ -28,15 +28,16 @@
                 <img src="assets/images/beer-full.webp" alt="An icon of a pint of beer" class="beer" id="pint3">
             </div>
             <div class="score-box">
-                <h2>Score: <span id="score">0</span></h2>
+                <h2>Score: <span id="score">0</span> of 15</h2>
             </div>
         </div>
     <!--Game area with question text, answers buttons and user messages.-->
         <div class="game-area">
             <div id="question-box">
-                <p id="question-text">Brush up on tricky capitals, rivers and geography trivia to win that next pub quiz. How many can you get right?
+                <p id="question-text">Brush up on tricky capitals, rivers and geography trivia to win that next pub quiz. 
+                    If you get an answer wrong, you'll lose a pint. You're allowed 3 mistakes before you'll need to start again.
                 </p>
-                <p id="user-message">You're allowed 3 mistakes before you'll need to start again.</p>
+                <p id="user-message">How many can you get right?</p>
             </div>
             <!--Buttons to be added to html for styling - replaced each round with JS-->
             <div id="answers" class="hide">
@@ -44,7 +45,8 @@
                 <button class="btn">Button 2</button>
                 <button class="btn">Button 3</button>
                 <button class="btn">Button 4</button>
-            </div>  
+            </div>
+            <p id="result-message">How many can you get right?</p>  
         </div>
         <!--This button gets the next question, on start screen it is renamed-->
         <div class="btn-div">

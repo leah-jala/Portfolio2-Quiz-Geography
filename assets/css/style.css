@@ -85,7 +85,8 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
     padding: 0 10px;
 }
-#user-message {
+#user-message,
+#result-message {
     text-align: center;
     padding: 20px 0 10px;
     font-size: 1.3em;

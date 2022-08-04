@@ -32,20 +32,25 @@
             </div>
         </div>
     </div>
-    <!--Game area with question text, answers and user messages-->
+    <!--Game area with question text, answers buttons and user messages.-->
         <div class="game-area">
             <div id="question-box">
                 <p id="question-text">Brush up on tricky capitals, rivers and geography trivia to win that next pub quiz. How many can you get right?
                 </p>
                 <p id="user-message">You're allowed 3 mistakes before you'll need to start again.</p>
             </div>
-            <div id="answers" class="">
+            <!--Buttons to be added to html for styling - replaced each round with JS-->
+            <div id="answers" class="hide">
                 <button class="btn">Button 1</button>
                 <button class="btn">Button 2</button>
                 <button class="btn">Button 3</button>
                 <button class="btn">Button 4</button>
             </div>  
         </div>
+        <div class="btn-div">
+            <button class="decision-btn" id="next-btn">Begin Game</button>
+        </div>
+        <a id="start-over" class="hide" href="index.html">Start Over</a>
         
     </main>
     <script src="assets/js/script.js"></script>

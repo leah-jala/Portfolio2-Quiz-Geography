@@ -286,7 +286,7 @@ const userMessage = document.getElementById("user-message");
 const questionText = document.getElementById('question-text');
 const startOver = document.getElementById('start-over');
 let answers = document.getElementById('answers');
-let theme = document.getElementById('theme');
+let theme = document.getElementsByTagName("h2");
 //Global varibles
 let answerStatus;
 let rightButton;
@@ -330,17 +330,17 @@ beginGameBtn.addEventListener('click', runQuiz);
 
     //Decide which set of questions to choose
     if (questionIndex < 5) {
-        document.getElementById("theme").innerText = "1: Capitals";
+        document.getElementById("theme").innerText = "Subject: Capitals";
         questionText.innerHTML = questions[capitalQuestionIndex].question;
         insertAnswers();
         capitalQuestionIndex++;
     } else if (questionIndex >= 5 && questionIndex <10) {
-        document.getElementById("theme").innerText = " 2: Rivers";
+        document.getElementById("theme").innerText = " Subject: Rivers";
         questionText.innerHTML = riverQuestions[riverQuestionIndex].question;
         insertAnswers();
         riverQuestionIndex++;
     } else if (questionIndex >= 10 && questionIndex <15) {
-        document.getElementById("theme").innerText = " 3: Trivia";
+        document.getElementById("theme").innerText = " Subject: Trivia";
         questionText.innerHTML = triviaQuestions[triviaQuestionIndex].question;
         insertAnswers();
         triviaQuestionIndex++;

@@ -385,8 +385,22 @@ beginGameBtn.addEventListener('click', runQuiz);
     }
 }
 
-function findUserAnswer(e) {
-    console.log("userAnswer");
+/**
+ * Evaluates data from the answer button event listener, disables the buttons,
+ * and calls the checkUserAnswer function. 
+ */
+ function findUserAnswer(e) {
+    //Create variables for the user button and selected answer text
+    let userButton = e.target;
+    let userAnswer = e.target.innerText;
+    //Save all the buttons in an array for iteration
+    let allButtons = document.querySelectorAll('.btn');
+    for (let i =0; i<4; i++) {
+        let currentButton = allButtons[i];
+        currentButton.disabled = true;
+        currentButton.classList.remove('btn');
+        currentButton.classList.add('btn-no-hover');
+    }  
 }
 
 /**

@@ -30,12 +30,12 @@ body {
 
 #globe {
     height: 100px;
-    width: 100px;
+    width: auto;
     margin-right:-15px;
 }
 .beer {
     height: 40px;
-    width: 40px;
+    width: auto;
     padding: 5%;
 }
 

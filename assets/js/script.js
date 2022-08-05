@@ -441,6 +441,7 @@ function shuffle(questions) {
         beginGameBtn.classList.remove('hide');
     }
  }
+ 
  /**
  * Replaces full beer image with empty beer image based on number of 
  * wrong answers. 

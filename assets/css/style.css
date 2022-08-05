@@ -19,6 +19,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.score-area {
+    padding: 5px;
+}
 .container {
     text-align: center;
     margin-bottom: 30px;

@@ -1,8 +1,9 @@
 # Around the World Pub Quiz
 ## Introduction
-This game has been created to fulfill Code Institute's Portfolio Project 2 course requirement. The course objective was to build an interactive front-end site using HTML, CSS and Javascript, which should allow users to interact with the site adn alter the way the site presents data.
+This [Around the World](https://leah-jala.github.io/Portfolio2-Quiz-Geography/) quiz has been created to fulfill Code Institute's Portfolio Project 2 course requirement. The course objective was to build an interactive front-end site using HTML, CSS and Javascript, which should allow users to interact with the site adn alter the way the site presents data.
 
 As a product of the fictional company, "Pub Quiz Wiz, the goal of the quiz is to help players gain knowledge for that next pub quiz. I choose the theme of geography because it is a weak area for many people, as it is not a topic given limited focus in schools.
+
 ![Am I Responsive image](docs/read-me-images/am-i-responsive.JPG) 
 
 ## Design
@@ -11,8 +12,11 @@ I planned the game using Balsamiq Wireframes.
 I CAN NOT OPEN THIS APP!
 
 ## Features
-### User Experience Goals & Feature Responses
+The aim was for the quiz to be as intuitive as possible. Everyone has played this sort of multiple choice quiz. One complaint from the young people I talked to was that they didn't get enough feedback on right and wrong answers, or the feedback was given in an awkward way. I decided that the user should have immediate feedback, as it would also help them learn faster. 
 
+The feature goals are summarized below.
+
+### User Experience Goals & Feature Responses
 #### Instructions
 - Goal: The user only needs brief instructions to play the game. Play should be intuitive.
     - Response: The landing page has a set of brief instructions. 

@@ -1,108 +1,72 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Around the World Pub Quiz
+## Introduction
+This game has been created to fulfill Code Institute's Portfolio Project 2 course requirement. The course objective was to build an interactive front-end site using HTML, CSS and Javascript, which should allow users to interact with the site adn alter the way the site presents data.
 
-Welcome leah-jala,
+As a fictional game, the goal of the quiz is to help players learn some tough geography questions to help users brush up and gain knowledge for that next pub quiz. I choose the theme of geography because it is a weak area for many people, as it is not a topic given much focus in schools. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Design
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Features
+### User Experience Goals & Feature Responses
 
-## Gitpod Reminders
+#### Instructions
+- Goal: The user only needs brief instructions to play the game. Play should be intuitive.
+    - Response: The landing page has a set of brief instructions. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+#### Interaction
+- Goal: The user should be certain of their selection.
+    - Response: Hover properties were added to the button to confirm user selection.
+- Goal: The user should get feedback if their selection was correct, and learn what the correct was correct.
+    - Response: If a wrong answer is selected, the button turns red and the correct response turns green. A correct answer turns green. All buttons if neither wrong, nor selected, turn grey.  
+- Goal: The user should know how many they have got wrong. 
+    - In the score area, there are three pints of beer. If the user chooses the wrong answer, one of the beer mugs is replaced by an empty image. If a user gets three wrong answers, there is a timeout so the user has a chace to see the correct answer before the Game Over screen is displayed.
+- Goal: The user should get a score.
+    - A tally is kept at the top of the screen. The answer is given out of the total number of questions that will be asked. 
 
-`python3 -m http.server`
+I originally had a number of feedback statements after the user selected make an answer selection. The people who tried my game thought it wasn't necessary. Either they stopped paying attention to it, didn't care about it one way or another, or found it distracting. I decided to delete it. 
 
-A blue button should appear to click: _Make Public_,
+#### Experience
+- Goal: The game site should be easy to navigate.
+    - Response: The start page has brief instructions and one button/choice, making it obvious how to start the game. The format of the question answer section is familiar as most games follow the same or similar format.
+- Goal: The game should be challenging, as the objective is to learn something new, but not so challenging that it is impossible to get any questions correct.
+- Goal: At the end of the game, users should feel that they want to play again. 
+    - Response: Each game round is limited to 15 questions - five from each of the categories. It is not a big time commitment to play, and if the player gets a lot of wrong answers, they can be more quickly mastered.
+- Goal: Users should have a variety of questions.
+    - Response: There are 3 subject areas, which are capitals, rivers and general trivia. Five questions are presented after shuffling a greater number of questions in the category. 
+- Goal: It shouldn't be possible to cheat by skipping questions. 
+    - Response: The "Next Question" button is not visible on the question/anwer page until the user makes a selection. 
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Testing
+| Area | Target |Expected | Result |
+| ---------------- |---------------- |---------------- | -----
+|Header | Globe Gif | It should spin | Valid|
+| Start page | Score area |Instructions text visible | True |
+| Start page | Score area |Beer pints should be full | True |
+| Start page | Score area  |Score is 0 of 15 | True |
+| Start page | Game area |Instructions displayed in question area | True |
+| Start page | Game area | User Message displays, "How many can you get right at the start of game. | True |
+| After clicking Game Over Link | Start page |All of the above is reset. | true |
+|Question/Answer  | Capitals questions (1-5) | 1st Wrong answer: Wrong answer turns read, right answer turns green, and beer pint 3 (right)changes. | True|
+|Question/Answer  | Capitals questions (1-5) | 2nd Wrong answer: As above, with the middle pint turning empty. | True|
+|Question/Answer  | Capitals questions (1-5) | 3rd Wrong answer: As above, with all beer pints empty. Plus, the game ends by displaying the start over page with message, "Thanks for Playing". The "Start Over" link is displayed. | True|
+|Progression | Capitals to Rivers| No wrong capitals answers: Score area subject text changes to Rivers. |True| 
 
-A blue button should appear to click: _Make Public_,
+|Progression | Capitals to Rivers|2 Wrong answers:  |
 
-Another blue button should appear to click: _Open Browser_.
+Fixes from testing
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Technology
+- Google Fonts
+- Font Awesome
+-  
+## Deployment
+## Credits
+### Javascript
+- Web Dev Simplified
+- The Fisher Yates shuffle
+### Page Design
+- Course Material
+- ShutterStock images
+- W3 Schools
+- 

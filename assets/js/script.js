@@ -410,17 +410,13 @@ beginGameBtn.addEventListener('click', runQuiz);
     } else if (userAnswer === rightAnswer) {
         win = true;
     }
-    userMessage.classList.remove('hide');
-
     if (win === true) {
         userButton.style.background = "green";
-        resultMessage.innerText = "That's right!"
         let oldScore = parseInt(document.getElementById("score").innerText);
         document.getElementById("score").innerText = ++oldScore;
     } else if (win != true) {
         userButton.style.background = "red";
         rightButton.style.background = "green";
-        resultMessage.innerText = "Oops! Try again!"
         emptyBeer();
     }
     if (wrongAnswers != 3) {

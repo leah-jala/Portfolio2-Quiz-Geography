@@ -2,9 +2,13 @@
 ## Introduction
 This game has been created to fulfill Code Institute's Portfolio Project 2 course requirement. The course objective was to build an interactive front-end site using HTML, CSS and Javascript, which should allow users to interact with the site adn alter the way the site presents data.
 
-As a fictional game, the goal of the quiz is to help players learn some tough geography questions to help users brush up and gain knowledge for that next pub quiz. I choose the theme of geography because it is a weak area for many people, as it is not a topic given much focus in schools. 
+As a product of the fictional company, "Pub Quiz Wiz, the goal of the quiz is to help players gain knowledge for that next pub quiz. I choose the theme of geography because it is a weak area for many people, as it is not a topic given limited focus in schools.
+![Am I Responsive image](docs/read-me-images/am-i-responsive.JPG) 
 
 ## Design
+I planned the game using Balsamiq Wireframes.
+
+I CAN NOT OPEN THIS APP!
 
 ## Features
 ### User Experience Goals & Feature Responses
@@ -37,7 +41,35 @@ I originally had a number of feedback statements after the user selected make an
     - Response: The "Next Question" button is not visible on the question/anwer page until the user makes a selection. 
 
 
-## Testing
+## Testing the game
+### User Feedback
+I have sent the game to people across a range of age groups. 
+- 16-18: 4
+- 20-30: 5
+- 30-40: 3
+- 50-60: 6
+- 60 and over: 4
+
+The game was most popular with young people who liked the challenge of it. They said they liked it because they had weak geography knowledge and the game allowed them to learn new facts. Older people gave me the impression they were embarrassed if they didn't know the answers.
+
+Originally, the game had used all 10 questions per category, meaning there were a total of 30 questions. This was more a negative for people 30+. It was too much of a time commitment and too frustrating because a lot of the questions were perceived as difficult, especially the rivers. When reduced to 5 questions and shuffled, the player was able to learn the answers and progress through the themes. It also resulted in playeres wanting to play multiple times to get the satisfaction of getting a perfect score. Each time they played, they got some different questions. This made the game more interesting to repeat. 
+
+When questioned whether there should be more easy questions, or if there should be a chance to get an extra try, the testers said no.  They liked the traditional three strikes and you're out model and felt that if that wasn't there, one would engage with the quiz passively and not remember the answers. 
+
+Players liked the blue and green colors, matching the globe.
+
+Players thought the game was intuitive.
+
+Players thought the beer pints were fun.
+
+Players liked the color changes to the answer buttons.
+
+I sought out criticism, but did not get much. This will to some extent be done to testing the game on people I know. There was some debate over the answer to one question, which I have now removed. It was a question about the longest river in the world, with some sources saying the Nile and others the Amazon. 
+
+I think perhaps the best and worst criticism I had is that it works like every other quiz they've tried on the internet. 
+
+### Manual Testing
+
 | Area | Target |Expected | Result |
 | ---------------- |---------------- |---------------- | -----
 |Header | Globe Gif | It should spin | True|
@@ -64,24 +96,46 @@ I originally had a number of feedback statements after the user selected make an
 |Game Over|Start Over link|When clicked, the game refreshes and returns to the screen with instructions. |True|
 
 
-
 Fixes:
-1. Theme variable declared incorrectly. Rewrote. 
+1. Theme variable declared incorrectly, and although it worked in the GitPod development environment, the game then did not work when deployed on GitHub. After declaring the variable the game worked. 
 
-Comments:
+EBIs (even better if)
 - I wanted to add a window.beforeunload function, but learned that it was not possible to create a custom message, so I have changed the instructions instead. 
+- As I went through the testing, I felt that there could be more types of user answers to match user end scores.
+
+### Lighthouse
+Lighthouse Destop results
+![Lighthouse-desktop](/docs/read-me-images/lighthouse-quiz-desktop.JPG)
+
+Lighthouse Mobile results
+![Lighthouse-desktop](/docs/read-me-images/lighthouse-quiz-mobile.JPG)
+
+Performance is slightly compromised by the rotating globe image. I followed the advice to convert it to webm and use a video tag. While I was able to do this successfully, by which I mean, it was uploaded and played automatically, it did not change the lighthouse score. At the same time, if you hovered over the webm file, you could see some properties which I didn't like. Based on my testers' experience of the game, I think this problem is not significant. The game loaded quickly on phones. 
+
+The beer images were also listed as a problem. I had already used TinyPNG to compress them and I changed the height values to be explicit, but it did not change the Lighthouse result. 
 
 ## Technology
 - Google Fonts
 - Font Awesome
--  
+- W3C Markup Validation Service
+- W3C CSS Validation Service - Jigsaw
+- Lighthouse
+- JSHint 
 ## Deployment
-## Credits
+
+to be completed
+
+## Credits/To be completed
+- Daisy
 ### Javascript
 - Web Dev Simplified
 - The Fisher Yates shuffle
 ### Page Design
-- Course Material
+- Balsamiq Wireframes
+- Course Materials
+- CSS Tricks
+### Images
 - ShutterStock images
-- W3 Schools
-- 
+### General Resources
+- W3 School
+- Markdown Cheat Sheet - https://www.markdownguide.org/cheat-sheet/

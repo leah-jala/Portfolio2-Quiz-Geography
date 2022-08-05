@@ -286,7 +286,6 @@ const userMessage = document.getElementById("user-message");
 const questionText = document.getElementById('question-text');
 const startOver = document.getElementById('start-over');
 let answers = document.getElementById('answers');
-let theme = document.getElementsByTagName("h2");
 //Global varibles
 let answerStatus;
 let rightButton;
@@ -327,20 +326,21 @@ beginGameBtn.addEventListener('click', runQuiz);
  */
  function addQuestion() {
     answers.innerHTML = "";
+    let theme = document.getElementsByTagName("h2");
 
     //Decide which set of questions to choose
     if (questionIndex < 5) {
-        document.getElementById("theme").innerText = "Subject: Capitals";
+        theme.innerText = "Subject: Capitals";
         questionText.innerHTML = questions[capitalQuestionIndex].question;
         insertAnswers();
         capitalQuestionIndex++;
     } else if (questionIndex >= 5 && questionIndex <10) {
-        document.getElementById("theme").innerText = " Subject: Rivers";
+        theme.innerText = " Subject: Rivers";
         questionText.innerHTML = riverQuestions[riverQuestionIndex].question;
         insertAnswers();
         riverQuestionIndex++;
     } else if (questionIndex >= 10 && questionIndex <15) {
-        document.getElementById("theme").innerText = " Subject: Trivia";
+        theme.innerText = " Subject: Trivia";
         questionText.innerHTML = triviaQuestions[triviaQuestionIndex].question;
         insertAnswers();
         triviaQuestionIndex++;
@@ -393,6 +393,7 @@ beginGameBtn.addEventListener('click', runQuiz);
  * and calls the checkUserAnswer function. 
  */
  function findUserAnswer(e) {
+    let win;
     //Create variables for the user button and selected answer text
     let userButton = e.target;
     let userAnswer = e.target.innerText;

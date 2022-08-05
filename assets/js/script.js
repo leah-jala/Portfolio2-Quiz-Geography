@@ -446,7 +446,6 @@ function shuffle(questions) {
  * wrong answers. 
  */
 function emptyBeer() {
-    console.log(wrongAnswers);
     if (wrongAnswers === 1) {
         document.getElementById('pint3').src = "assets/images/beer-empty.webp";
         document.getElementById('pint3').alt = "An image of an empty beer pint.";

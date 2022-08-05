@@ -298,11 +298,28 @@ let capitalQuestionIndex = 0;
 let riverQuestionIndex = 0;
 let triviaQuestionIndex = 0; 
 let wrongAnswers = 0;
+//Shuffle the questions
+questions = shuffle(questions);
+riverQuestions = shuffle(riverQuestions);
+triviaQuestions = shuffle(triviaQuestions);
 
 //Start game the game with an event listener on the begin game button
 const beginGameBtn = document.getElementById('next-btn');
 beginGameBtn.addEventListener('click', runQuiz);
-
+/**
+ * Shuffles the questions.
+ */
+//This comes from codebubb, https://www.youtube.com/watch?v=5sNGqsMpW1E
+//It's the Fisher Yates algorithm. 
+function shuffle(questions) {
+    for (let i = questions.length-1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i+1));
+      const temp = questions[i];
+      questions[i] = questions[j];
+      questions[j] = temp;
+    }
+    return questions;
+  }
 /**
  * Launches the game by setting the screen to display game information
  * and calling the addQuestion function.
@@ -327,11 +344,10 @@ beginGameBtn.addEventListener('click', runQuiz);
  */
  function addQuestion() {
     answers.innerHTML = "";
-    let theme = document.getElementsByTagName("h2");
-
+    let theme = document.getElementById('theme');
     //Decide which set of questions to choose
     if (questionIndex < 5) {
-        theme.innerText = "Subject: Capitals";
+        theme.innerHTML = "Theme: Capitals";
         questionText.innerHTML = questions[capitalQuestionIndex].question;
         insertAnswers();
         capitalQuestionIndex++;

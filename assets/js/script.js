@@ -468,12 +468,13 @@ function emptyBeer() {
  function gameOver() {
     answers.innerHTML = "";
     if (wrongAnswers === 0) {
-        questionText.innerHTML = "Amazing result! Please be on my team!";
+        questionText.innerHTML = "Game Over! Amazing result! Please be on my team!";
+    } else if (wrongAnswers === 1) {
+        questionText.innerHTML = "Game Over! Only one wrong! Try again for a perfect score!";
+    } else if (wrongAnswers === 2) {
+        questionText.innerHTML = "Game Over! You're on your way to being a expert. Play again to improve your score!";
     } else {
         questionText.innerHTML = "Game Over! Thanks for playing!";
-        if (questionIndex < 8) {
-        userMessage.innerText = "Play again to improve your score.";
-        } 
     }
     startOver.classList.remove('hide');
     beginGameBtn.classList.add('hide'); 

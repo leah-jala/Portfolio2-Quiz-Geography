@@ -41,20 +41,23 @@ I originally had a number of feedback statements after the user selected make an
 | Area | Target |Expected | Result |
 | ---------------- |---------------- |---------------- | -----
 |Header | Globe Gif | It should spin | Valid|
-| Start page | Score area |Instructions text visible | True |
+| Start page | Score area |The word "Instructions" is displaying | True |
 | Start page | Score area |Beer pints should be full | True |
 | Start page | Score area  |Score is 0 of 15 | True |
-| Start page | Game area |Instructions displayed in question area | True |
+| Start page | Game area |The innstructions  on how to pay aredisplayed in question area | True |
 | Start page | Game area | User Message displays, "How many can you get right at the start of game. | True |
-| After clicking Game Over Link | Start page |All of the above is reset. | true |
-|Question/Answer  | Capitals questions (1-5) | 1st Wrong answer: Wrong answer turns read, right answer turns green, and beer pint 3 (right)changes. | True|
-|Question/Answer  | Capitals questions (1-5) | 2nd Wrong answer: As above, with the middle pint turning empty. | True|
-|Question/Answer  | Capitals questions (1-5) | 3rd Wrong answer: As above, with all beer pints empty. Plus, the game ends by displaying the start over page with message, "Thanks for Playing". The "Start Over" link is displayed. | True|
-|Progression | Capitals to Rivers| No wrong capitals answers: Score area subject text changes to Rivers. |True| 
+|Start page|Under Game area|Begin Button hover properties work| True|
+|Start page|Under Game area|Begin Button, when clicked, takes user to question page and hides| True|
+|Score Area|Pints|Pints change from full to empty when an answer is wrong|True|
+|Score area|Theme|The word "instructions" should change to "Theme: Capitals"|False - it still says instructions. Fix 1
+|Score Area|Theme| The theme should change to rivers when questionIndex=5, and to trivia when questionIndex 6|True|
+|Game Over|User Message|If all answers are correct (15/15), user message reads, "Amazing result! Please be on my team"|True|
+|Game Over|User Message|If wrongAnswer = 3, user message reads, "Game Over! Thanks for Playing"|True|
 
-|Progression | Capitals to Rivers|2 Wrong answers:  |
 
-Fixes from testing
+Fixes:
+1. Theme variable declared incorrectly. Rewrote. 
+
 
 ## Technology
 - Google Fonts

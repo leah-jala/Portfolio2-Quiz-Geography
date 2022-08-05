@@ -327,9 +327,6 @@ function shuffle(questions) {
  */ 
 
  function runQuiz(){
-    window.addEventListener('beforeunload', (event) => {
-        event.returnValue = `If you refresh or use the browswer back arrows you'll restart the game. Are you sure you want to start again?`;
-      });
     //Set page to start - hide buttons and user message
     userMessage.classList.add("hide");
     beginGameBtn.classList.add('hide');

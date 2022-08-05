@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Eczar&family=Lato:wght@300&family=Neuton&family=Oswald&family=Roboto:wght@300;400&display=swap');
-
-
 /*Set global properties*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 /* Body properties, with max-width to limit the size of the game */
 body {
     font-family: 'Roboto', serif;
@@ -27,7 +24,6 @@ body {
     margin-bottom: 30px;
 }
 /*Set properties for the images */
-
 #globe {
     height: 100px;
     width: 100px;
@@ -52,7 +48,6 @@ h2 {
     color: #ffffff;
     letter-spacing: 1px;
 }
-
 /* Score area and free-play icons */
 .score-area {
     column-gap: 5%;
@@ -91,7 +86,7 @@ h2 {
     padding: 20px 0 10px;
     font-size: 1.3em;
 }
-/*Answer button properties*/
+/*Answer button and button hover properties*/
 .btn {
     padding:15px;
     margin: 5px 10px;
@@ -107,7 +102,6 @@ h2 {
     box-shadow: 0 0 5px 2px;
     background:#2E7CB5
 }
-
 .btn-no-hover {
     padding:15px;
     margin: 5px 10px;
@@ -117,9 +111,7 @@ h2 {
     font-size: 1.2em;
     cursor: pointer;
 }
-
 /* Next question (and start game) button */
-
 .btn-div {
     display: flex;
     justify-content: center;

@@ -40,7 +40,7 @@ I originally had a number of feedback statements after the user selected make an
 ## Testing
 | Area | Target |Expected | Result |
 | ---------------- |---------------- |---------------- | -----
-|Header | Globe Gif | It should spin | Valid|
+|Header | Globe Gif | It should spin | True|
 | Start page | Score area |The word "Instructions" is displaying | True |
 | Start page | Score area |Beer pints should be full | True |
 | Start page | Score area  |Score is 0 of 15 | True |
@@ -48,16 +48,28 @@ I originally had a number of feedback statements after the user selected make an
 | Start page | Game area | User Message displays, "How many can you get right at the start of game. | True |
 |Start page|Under Game area|Begin Button hover properties work| True|
 |Start page|Under Game area|Begin Button, when clicked, takes user to question page and hides| True|
-|Score Area|Pints|Pints change from full to empty when an answer is wrong|True|
-|Score area|Theme|The word "instructions" should change to "Theme: Capitals"|False - it still says instructions. Fix 1
+|Score area|Theme|The word "instructions" should change to "Theme: Capitals"|False - it still says instructions. Fix 1|
 |Score Area|Theme| The theme should change to rivers when questionIndex=5, and to trivia when questionIndex 6|True|
+|Score Area|Pints|Pints change from full to empty when an answer is wrong.|True|
+|Score Area|Score|The score increments with correct answers only.|True|
+|Q & A Area|Question|Questions from the correct area are given|True|
+|Q & A Area|Questions|The question are shuffled when game reloads|True|
+|Q & A Area|Answers|The hover properties work.|True|
+|Q & A Area|Answers|The answers match the related question.|True|
+|Q & A Area|Answers|Correct answers display green, wrong answers display red, the other questions gray.|True|
+|Q & A Area|Answers|When there are three wrong answers the game ends.|True|
+|Q & A Area|Answers|After 3 wrong answers, the function pauses before moving to "game over," to give the user time to see the correct answer.|True|
 |Game Over|User Message|If all answers are correct (15/15), user message reads, "Amazing result! Please be on my team"|True|
 |Game Over|User Message|If wrongAnswer = 3, user message reads, "Game Over! Thanks for Playing"|True|
+|Game Over|Start Over link|When clicked, the game refreshes and returns to the screen with instructions. |True|
+
 
 
 Fixes:
 1. Theme variable declared incorrectly. Rewrote. 
 
+Comments:
+- I wanted to add a window.beforeunload function, but learned that it was not possible to create a custom message, so I have changed the instructions instead. 
 
 ## Technology
 - Google Fonts

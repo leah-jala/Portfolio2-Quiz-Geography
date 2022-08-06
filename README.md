@@ -2,12 +2,12 @@
 ## Introduction
 This [Around the World](https://leah-jala.github.io/Portfolio2-Quiz-Geography/) quiz has been created to fulfill Code Institute's Portfolio Project 2 course requirement. The course objective was to build an interactive front-end site using HTML, CSS and Javascript, which should allow users to interact with the site adn alter the way the site presents data.
 
-As a product of the fictional company, "Pub Quiz Wiz, the goal of the quiz is to help players gain knowledge for that next pub quiz. I choose the theme of geography because it is a weak area for many people, as it is not a topic given limited focus in schools.
+As a product of the fictional company, "Pub Quiz Wiz," the goal of the quiz is to help players gain knowledge to be able to win that next pub quiz. I choose the theme of geography because it is a weak area for many people, as it is not a topic limited focus in schools. On a personal level, I wanted this game for my daughters (they are 18) to improve their knowledge in this area as well.
 
 ![Am I Responsive image](docs/read-me-images/am-i-responsive.JPG) 
 
 ## Design with Wireframes
-I used Balsamiq Wireframes to plan the design of the game, and it helped me to plan the html, with ids and classes, before I came to write it. This was thanks to the model presented in the Love Maths walk through. 
+I used Balsamiq Wireframes to design of the game, and it helped me to plan the html (needed divs, ids and classes), before I came to write it. This approach was thanks to the model presented in the Love Maths walk through. 
 
 - Start/home screen
 
@@ -15,25 +15,29 @@ I used Balsamiq Wireframes to plan the design of the game, and it helped me to p
 
 - Desktop design of the game in play
 
-- ![Desktop in play](/docs/read-me-images/WF-in-play-desktop.JPG) 
+![Desktop in play](/docs/read-me-images/WF-in-play-desktop.JPG) 
 
 - Mobile design of the game in play
+
 ![Mobile game in play](/docs/read-me-images/WF-mobile.JPG)
 
 - Game over screen
-![Game over screen](/docs/read-me-images/WF-game-over.JPG)
-## Features
-The aim was for the quiz to be as intuitive as possible. Everyone has played this sort of multiple choice quiz. One complaint from the young people I talked to was that they didn't get enough feedback on right and wrong answers, or the feedback was given in an awkward way. I decided that the user should have immediate feedback, as it would also help them learn faster. 
 
-The feature goals are summarized below.
+![Game over screen](/docs/read-me-images/WF-game-over.JPG)
+
+## Features
+The aim was for the quiz to be as intuitive as possible. Everyone has played this sort of multiple choice quiz. One complaint from the young people I talked to when I was planning the game was that they didn't get enough feedback on right and wrong answers during play, or that the feedback was given in an awkward way. I decided that the user should have immediate feedback, as it would also help them learn faster. 
+
+The goals of the quiz features are summarized below.
+
 
 ### User Experience Goals & Feature Responses
 #### Instructions
-
+![Instructions](/docs/read-me-images/instructions.JPG)
 - Goal: The user only needs brief instructions to play the game. Play should be intuitive.
     - Response: The landing page has a set of brief instructions. 
     - Value: Even if the game is simple and intuitive, people like to know how games/quizzes work and what to expect. With this quiz, it helps to know it will be challenging (the instructions prepare you to expect tricky questions) and that you can only get three wrong answers. The instructions also make it know that you can't reverse by using the browser arrows for a second try at a quesiton. 
-![Instructions](/docs/read-me-images/instructions.JPG)
+
 
 #### Interaction
 - Goal: The user should be certain of their selection.
@@ -43,21 +47,29 @@ The feature goals are summarized below.
 
 - Goal: The user should get feedback if their selection was correct, and learn what the correct was correct.
     - Response: If a wrong answer is selected, the button turns red and the correct response turns green. A correct answer turns green. All buttons if neither wrong, nor selected, turn grey.  If a player gets three answers wrong, a "timeout" prevents the "Game Over" screen from displaying immediately, giving the user the chance to see the correct answer.
-    - Value: I asked a small group of young people who regularly take BuzzFeed quizzes what they liked and didn't like. These were my daughters and their friends, but in all fairness they spend a lot of time on this. They feed back that they wanted immediate feedback on a selected answer rather than waiting for the end. By giving this feedback, they say that the game is less frustrating to use and it gives them a better chance of remembering the answer for the next time. 
-    
+    - Value: I asked a small group of young people who regularly take BuzzFeed quizzes what they liked and didn't like. These were my daughters and their friends, but in all fairness they spend a lot of time on this. They fed back that they wanted immediate feedback on a selected answer rather than waiting for the end. By giving this feedback, they say that the game is less frustrating to use and it gives them a better chance of remembering the answer for the next time. 
+
+
+    ![Wrong Answer](/docs/read-me-images/wrong-answer.JPG)
+
 - Goal: The user should know how many they have got wrong. 
     - Resposne: In the score area, there are three pints of beer. If the user chooses the wrong answer, one of the beer mugs is replaced by an empty image. If a user gets three wrong answers, there is a timeout so the user has a chace to see the correct answer before the Game Over screen is displayed.
-    - Value: Game users are used to the idea of having three lives. The 3 beer pints that change their value offer this familiarity, while at the same time bring some fun to the game. The user always knows how many answers they can still get wrong.
-- Goal: The user should get a score.
+    - Value: Game users are used to the idea of having three lives. The 3 beer pints that change their value by emptying offer this familiarity, while at the same time bring some fun to the game. The user always knows how many answers they can still get wrong.
+
+    ![Empty pints](/docs/read-me-images/pints-wrong.JPG)
+
+- Goal: The user should get a score (refer to image above).
     - Response: A tally is kept at the top of the screen. The answer is given out of the total number of questions that will be asked. 
     - Value: The tally at the top lets users know how many that they have got right, but it also indicates how far they have progressed. I asked the group I tested the game on if they would also like a tally of total questions asked, in order not to have to add wrong answers to the score, but no one thought it was necessary. 
 
-I originally had a number of feedback statements after the user selected make an answer selection. The people who tried my game thought it wasn't necessary. Either they stopped paying attention to it, didn't care about it one way or another, or found it distracting. I decided to delete it. 
+I originally had a number of in-game feedback statements after the user selected make an answer selection. The people who tried my game thought it wasn't necessary. Either they stopped paying attention to it, didn't care about it one way or another, or found it distracting. I decided to delete it. 
 
 #### Experience
 - Goal: The game site should be easy to navigate.
-    - Response: The start page has brief instructions and one button/choice, making it obvious how to start the game. The format of the question answer section is familiar as most games follow the same or similar format.
-    - Value: The familiarity of the game design allows users to confidently jump right into the quiz. See comment above on the value of the instructions.
+![New Question](/docs/read-me-images/New%20question.JPG)
+    - Response: The format of the question answer section is familiar as most games follow the same or similar format.
+    - Value: The familiarity of the game design allows users to confidently jump right into the quiz. See comment above on the value of the instructions. It is obvious that the player must select one of four possible answers. 
+
 - Goal: The game should be challenging, as the objective is to learn something new, but not so challenging that it is impossible to get any questions correct.
     - Response: I looked at the types of questions that are published for pub quizzes and found that the questions could be quite challenging. To win a pub quiz, you'd have to know the difficult questions and this game is intended to prepare people to do that, so the questions should be difficult. The game has mostly difficulty questions, with some easy ones. Most people's general knowledge would allow them to eliminate at least half of wrong answers in the answer section. This is at least my intention, and I acknowledge I am not an expert at these types of quizzes. 
     - Value: Most people will learn something new by taking the quiz, but they should be prevented with enough answers they know so as not to get frustrated.
@@ -72,7 +84,9 @@ I originally had a number of feedback statements after the user selected make an
     - Value: I think that most players wouldn't try to go back a step, but it would be natural to want to take a pass on some questions. By removing the option, allows the user to have a genuine sense of accomplishment and learning at the end while. I believe it makes the game more robust.
 
 ### Responsiveness
-This game was designed using flex properties, to allow it be be responsive to different sized screens. I kept the screen on "inspect" and tested the responsiveness between 280 pixels wide to the game's maximum width. This maximum width was limited to 800px. After testing my link on "Am I responsive," I found that it looked a bit odd being centred at the top of a large screen and added a margin for large screens, and removed it with a media query on small screens. 
+This game was designed using flex properties, to allow it be be responsive to different sized screens. I kept the screen on "inspect" and tested the responsiveness between 280 pixels wide to the game's maximum width. This maximum width was limited to 800px. After testing my link on "Am I responsive," I found that it looked a bit odd being centred at the top of a large screen and added a margin for large screens, and removed it with a media query on small screens. Most people wanted to use this game on their mobiles and enjoyed that display.
+
+![Mobile version of quiz](/docs/read-me-images/mobile-quiz.JPG)
 
 ## Testing the game
 ### User Feedback
@@ -97,12 +111,20 @@ Players thought the beer pints were fun.
 
 Players liked the color changes to the answer buttons.
 
-I sought out criticism, but did not get much. This will to some extent be done to testing the game on people I know. There was some debate over the answer to one question, which I have now removed. It was a question about the longest river in the world, with some sources saying the Nile and others the Amazon. 
+I sought out criticism, but did not get much, which might be because I sent it to people I know instead of putting it out on Slack. There was some debate over the answer to one question, which I have now removed. It was a question about the longest river in the world, with some sources saying the Nile and others the Amazon. 
 
-I think perhaps the best and worst criticism I had is that it works like every other quiz they've tried on the internet. 
+I think perhaps the best and worst feedback I had is that it works like every other quiz they've tried on the internet. 
+
+## Accessibility Testing
+I followed advice we have so far received via Code Institute training regarding accessibility. This included
+- Adding aria labels to images.
+- Ensuring color contrast was adequate. I used the contrast and color section of the [Web Accessibility Guidelines](https://leah-jala.github.io/Portfolio2-Quiz-Geography/index.html) to choose/check my colors.
+- I tested my site using the [Wave Web Accessiblity Evaluation Tool](https://wave.webaim.org/).
+
+![Wave score](/docs/read-me-images/wave.JPG)
 
 ### Device Testing
-The people who tested the quiz had the following types of phones and PCs, with no reported problems. Most people had iPhones. 
+The people who tested the quiz had the following types of phones and PCs, with no reported problems. Most people had iPhones. I asked some of them to try it on work computers or other devices they owned, such as tablets.
 - iPhone 8 (2 people)
 - iPhone 10 (5 people)
 - iPhone 12 (3 people)
@@ -118,6 +140,8 @@ The people who tested the quiz had the following types of phones and PCs, with n
 ### Manual Testing
 
 Game Area description
+
+Testing of the quiz is summarized in a table below, making reference to areas of the quiz. Below is a description of each area reference to the quiz.
 
 1. In the table below, the "Header" refers the top section of the game with the spinning globe gif and the title of the game.
 
@@ -135,7 +159,7 @@ Game Area description
 
 ![Game area with questions](/docs/read-me-images/game-area-questions.JPG)
 
-5. This is the same area with an incorrect response. Notice that the "Next Question" button appears after the user selects and answer, and, as this is a wrong answer, a beer pint has been emptied. The game screen also shows users they are answering questions about capitals and they have answered 1 question correctly.
+5. This is the same area, but with an incorrect response. Notice that the "Next Question" button appears after the user selects and answer, and, as this is a wrong answer, a beer pint has been emptied. The game screen also shows users they are answering questions about capitals and they have answered 1 question correctly.
 
 ![Incorrect answer in game area](/docs/read-me-images/game-area-incorrect.JPG)
 
@@ -184,9 +208,11 @@ Game Area description
 
 ### Lighthouse
 Lighthouse Destop results
+
 ![Lighthouse-desktop](/docs/read-me-images/lighthouse-quiz-desktop.JPG)
 
 Lighthouse Mobile results
+
 ![Lighthouse-desktop](/docs/read-me-images/lighthouse-quiz-mobile.JPG)
 
 Performance is slightly compromised by the rotating globe image. I followed the advice to convert it to webm and use a video tag. While I was able to do this successfully, by which I mean, it was uploaded and played automatically, it did not change the lighthouse score. At the same time, if you hovered over the webm file, you could see some properties which I didn't like. Based on my testers' experience of the game, I think this problem is not significant. The game loaded quickly on phones. 
@@ -194,7 +220,13 @@ Performance is slightly compromised by the rotating globe image. I followed the 
 The beer images were also listed as a problem. I had already used TinyPNG to compress them and I changed the height values to be explicit, but it did not change the Lighthouse result. 
 
 ## Technology
+- HTML - This provides the structure of the quiz.
+- CSS - The quiz was styled with a linked CSS file.
+- JavaScript - The quiz's game play logic was created using Javascript.
+- GitPod - GitPod was the development environment used to create the game and push it to GitHub. 
 - [Google Fonts](https://fonts.google.com/) - I used the Roboto font style.
+- [Font Awesome](https://fontawesome.com/) - For the beer pint images.
+- Balsamiq Wireframes - The site was designed on the Balsamiq desktop app.
 - W3C Markup Validation Service
 - W3C CSS Validation Service - Jigsaw
 - Lighthouse
@@ -216,15 +248,17 @@ To create a public link for the game, I took the following steps in GitHub:
 ### Note on Commits
 When I wrote the HTML and CSS, I felt I had got the hang of making good commits compared to project portfolio 1. When I got to a certain stage of writing the JavaScript, it all became a mess as I would try something which didn't work and repeatedly change and fix things until my commits were a confusing mess or I had worked so long I didn't even know what the commit should be. I decided to redo the project because of this in a new repository. When I looked at the commits, I realized that they did not represent an accurate step by step process, so I did it again. I found it incredibly difficult to reproduce my own code again, as I did the first time, and now I realize it must look like I have created this project very quickly, in a day, which is VERY far from the truth. I think some of the commits might still be too large. I need to learn more about version control. I have been reading up on cloning projects in GitHub. 
 
-## Credits/To be completed
-- Daisy
+## Credits & Resources
+- My mentor, Daisy McGirr, has been an invaluable source of support and advice.
 ### Javascript
-- Web Dev Simplified
-- The Fisher Yates shuffle
+- [Build a Quiz App with JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=498s) by Web Dev Simplified. It was useful to see the process of building a quiz. It helped me overcome a problem I was having with inserting answer text into my buttons, and it the reason why I decided to use JavaScript to insert the answer buttons, rather than replace text inside buttons elements in the html. It seemed a familiar and useful approach, as it reminded me of a couple of the challenges we had in the Code Institute course on JavaScript.
+- [How to shuffle an array in JavaScript](https://www.youtube.com/watch?v=5sNGqsMpW1E). I explored different ways of shuffling the questions, and found solutions by using math.random() combined with pop(). After doing a bit of research, I found this link which showed two methods. The first demonstrated the method I wanted to use and described it as less robust than his second method which uses the "Fisher Yates" algorithm. While it is not something at this point I would have figured out on my own, I wanted to use a better practice. I inserted the code and tested it and it worked great, so I decided to keep and credit it. 
+
 ### Page Design
 - [Font Awesome](https://fontawesome.com/) - For the beer pints.
 - Balsamiq Wireframes
 - [CSS Tricks, A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Web Accessiblity Guidelines](http://web-accessibility.carnegiemuseums.org/design/color/) - I used this site to check color contrast.
 ### Images
 - [ShutterStock](https://www.shutterstock.com/) - The rotating globe.
 ### General Resources

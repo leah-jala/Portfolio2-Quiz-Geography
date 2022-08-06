@@ -6,11 +6,22 @@ As a product of the fictional company, "Pub Quiz Wiz, the goal of the quiz is to
 
 ![Am I Responsive image](docs/read-me-images/am-i-responsive.JPG) 
 
-## Design
-I planned the game using Balsamiq Wireframes.
+## Design with Wireframes
+I used Balsamiq Wireframes to plan the design of the game, and it helped me to plan the html, with ids and classes, before I came to write it. This was thanks to the model presented in the Love Maths walk through. 
 
-I CAN NOT OPEN THIS APP!
+- Start/home screen
 
+![start page](/docs/read-me-images/WF-instructions.JPG)
+
+- Desktop design of the game in play
+
+- ![Desktop in play](/docs/read-me-images/WF-in-play-desktop.JPG) 
+
+- Mobile design of the game in play
+![Mobile game in play](/docs/read-me-images/WF-mobile.JPG)
+
+- Game over screen
+![Game over screen](/docs/read-me-images/WF-game-over.JPG)
 ## Features
 The aim was for the quiz to be as intuitive as possible. Everyone has played this sort of multiple choice quiz. One complaint from the young people I talked to was that they didn't get enough feedback on right and wrong answers, or the feedback was given in an awkward way. I decided that the user should have immediate feedback, as it would also help them learn faster. 
 
@@ -18,17 +29,22 @@ The feature goals are summarized below.
 
 ### User Experience Goals & Feature Responses
 #### Instructions
+
 - Goal: The user only needs brief instructions to play the game. Play should be intuitive.
     - Response: The landing page has a set of brief instructions. 
     - Value: Even if the game is simple and intuitive, people like to know how games/quizzes work and what to expect. With this quiz, it helps to know it will be challenging (the instructions prepare you to expect tricky questions) and that you can only get three wrong answers. The instructions also make it know that you can't reverse by using the browser arrows for a second try at a quesiton. 
+![Instructions](/docs/read-me-images/instructions.JPG)
 
 #### Interaction
 - Goal: The user should be certain of their selection.
     - Response: Hover properties were added to the button to confirm user selection.
     - Value: As the look of the answer button changes, the user is sure about which button they are selecting and is at least much less likely to inadvertently choose the wrong answer. The button size is likewise large enough to help prevent an accidental choice.
+![Button hover](/docs/read-me-images/hover.png)
+
 - Goal: The user should get feedback if their selection was correct, and learn what the correct was correct.
     - Response: If a wrong answer is selected, the button turns red and the correct response turns green. A correct answer turns green. All buttons if neither wrong, nor selected, turn grey.  If a player gets three answers wrong, a "timeout" prevents the "Game Over" screen from displaying immediately, giving the user the chance to see the correct answer.
     - Value: I asked a small group of young people who regularly take BuzzFeed quizzes what they liked and didn't like. These were my daughters and their friends, but in all fairness they spend a lot of time on this. They feed back that they wanted immediate feedback on a selected answer rather than waiting for the end. By giving this feedback, they say that the game is less frustrating to use and it gives them a better chance of remembering the answer for the next time. 
+    
 - Goal: The user should know how many they have got wrong. 
     - Resposne: In the score area, there are three pints of beer. If the user chooses the wrong answer, one of the beer mugs is replaced by an empty image. If a user gets three wrong answers, there is a timeout so the user has a chace to see the correct answer before the Game Over screen is displayed.
     - Value: Game users are used to the idea of having three lives. The 3 beer pints that change their value offer this familiarity, while at the same time bring some fun to the game. The user always knows how many answers they can still get wrong.
@@ -101,7 +117,8 @@ The people who tested the quiz had the following types of phones and PCs, with n
 
 ### Manual Testing
 
-Game Area Detail
+Game Area description
+
 1. In the table below, the "Header" refers the top section of the game with the spinning globe gif and the title of the game.
 
 ![Header](/docs/read-me-images/Header.JPG)
@@ -122,8 +139,9 @@ Game Area Detail
 
 ![Incorrect answer in game area](/docs/read-me-images/game-area-incorrect.JPG)
 
-6. The "Under Game area" refers to the white block under the green section. This contains either the "Begin Game/Next Question" button, or the "Start Over" link which only appears when the game is over. Below is an example of the "Game Over" screen.
+6. The "Under Game area" refers to the white block under the green section (see above). This contains either the "Begin Game/Next Question" button, or the "Start Over" link which only appears when the game is over. Below is an example of the "Game Over" screen.
 
+7. The Game Over Screen gives let's the player know the game is over and gives them a message.
 ![Game over screen](/docs/read-me-images/game-over.JPG)
 
 | Area | Target |Expected | Result |
@@ -136,20 +154,22 @@ Game Area Detail
 |Game area | he green section |On the start page, before the user clicks the begin game button, the user message (in smaller font) displays, "How many can you get right at the start of game. | True |
 |Under Game area|The white section under the green area, on the start page.|Begin Button hover properties work| True|
 |Under Game area|The white section under the green box.|The "Begin Button", when clicked, takes user to question page and hides| True|
-|Score area|The "Theme" on the left-hand side|Once the game is in play, starting from question one, the word "instructions" should change to "Theme: Capitals"|False - it still says instructions. True after fix 1, see below.|
-|Score Area|Theme, as above| The theme should change to rivers when question index is between 6-10, and to trivia when questionIndex 6|True|
-|Score Area|Pints|Pints change from full to empty when an answer is wrong.|True|
-|Score Area|Score|The score increments with correct answers only.|True|
-|Q & A Area|Question|Questions from the correct area are given|True|
-|Q & A Area|Questions|The question are shuffled when game reloads|True|
-|Q & A Area|Answers|The hover properties work.|True|
-|Q & A Area|Answers|The answers match the related question.|True|
-|Q & A Area|Answers|Correct answers display green, wrong answers display red, the other questions gray.|True|
-|Q & A Area|Answers|When there are three wrong answers the game ends.|True|
-|Q & A Area|Answers|After 3 wrong answers, the function pauses before moving to "game over," to give the user time to see the correct answer.|True|
-|Game Over|User Message|If all answers are correct (15/15), user message reads, "Amazing result! Please be on my team"|True|
-|Game Over|User Message|If wrongAnswer = 3, user message reads, "Game Over! Thanks for Playing"|True|
-|Game Over|Start Over link|When clicked, the game refreshes and returns to the screen with instructions. |True|
+|Score area|The "Theme" on the left-hand side|Once the game is in play, starting from question one, the word "instructions" should change to "Theme: Capitals"|True after fix 1, see below.|
+|Score Area|Theme, as above| The theme display as "Rivers" when question index (which begins at zero) is between 5-9, and "Trivia when questionIndex 10-14|True|
+|Score Area|The three pints in the middle|Pints change from full to empty when the players selects the wrong answer.|True|
+|Score Area|Score tally on the right|The score increments with correct answers only.|True|
+|Game Area|Questions|Questions from the correct theme are presented to the river, e.g. if the theme is capitals, the questions asks for the same.|True for all 3 themese|
+|Game Area|Questions|The question are shuffled when game reloads|True|
+|Game Area|The answer buttons|The hover properties work.|True|
+|Game Area|Answer buttons|The text content on the answer buttons match the related question.|True|
+|Game Area|Answer buttons|When an answer button is selected, a correct answer display green, wrong answer display red,  other questions grey.|True|
+|Game Area|Answer buttons|When there are three wrong answers the game ends.|True|
+|Game Area|Answer buttons|After 3 wrong answers, the function pauses before moving to "game over," to give the user time to see the correct answer.|True|
+|Game Over|The message given when there are no wrong answers|If all answers are correct (15/15), user message reads, "Amazing result! Please be on my team"|True|
+|Game Over|The message to the user with 1 wrong answer|The message is, "Game Over! Only one wrong! Try again for a perfect score!"|True|
+|Game Over|The message to the user with 2 wrong answers|The message is, "Game Over! You're on your way to being a expert. Play again to improve your score!"|True|
+|Game Over|The message to the user with 3 wrong answers|"Keep playing to improve your score!"|True|
+|Game Over|"Start Over" link|When clicked, the game refreshes and returns to the screen with instructions, with score and pint values reset. |True|
 
 
 ### Fixes:
@@ -174,8 +194,7 @@ Performance is slightly compromised by the rotating globe image. I followed the 
 The beer images were also listed as a problem. I had already used TinyPNG to compress them and I changed the height values to be explicit, but it did not change the Lighthouse result. 
 
 ## Technology
-- Google Fonts
-- Font Awesome
+- [Google Fonts](https://fonts.google.com/) - I used the Roboto font style.
 - W3C Markup Validation Service
 - W3C CSS Validation Service - Jigsaw
 - Lighthouse
@@ -203,11 +222,11 @@ When I wrote the HTML and CSS, I felt I had got the hang of making good commits 
 - Web Dev Simplified
 - The Fisher Yates shuffle
 ### Page Design
+- [Font Awesome](https://fontawesome.com/) - For the beer pints.
 - Balsamiq Wireframes
-- Course Materials
-- CSS Tricks
+- [CSS Tricks, A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 ### Images
-- ShutterStock images
+- [ShutterStock](https://www.shutterstock.com/) - The rotating globe.
 ### General Resources
-- W3 School
-- Markdown Cheat Sheet - https://www.markdownguide.org/cheat-sheet/
+- [W3Schools](https://www.w3schools.com/) - As a general reference.
+- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) 

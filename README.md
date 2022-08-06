@@ -24,12 +24,16 @@ The feature goals are summarized below.
 #### Interaction
 - Goal: The user should be certain of their selection.
     - Response: Hover properties were added to the button to confirm user selection.
+    - Value:
 - Goal: The user should get feedback if their selection was correct, and learn what the correct was correct.
     - Response: If a wrong answer is selected, the button turns red and the correct response turns green. A correct answer turns green. All buttons if neither wrong, nor selected, turn grey.  
+    - Value:
 - Goal: The user should know how many they have got wrong. 
-    - In the score area, there are three pints of beer. If the user chooses the wrong answer, one of the beer mugs is replaced by an empty image. If a user gets three wrong answers, there is a timeout so the user has a chace to see the correct answer before the Game Over screen is displayed.
+    - Resposne: In the score area, there are three pints of beer. If the user chooses the wrong answer, one of the beer mugs is replaced by an empty image. If a user gets three wrong answers, there is a timeout so the user has a chace to see the correct answer before the Game Over screen is displayed.
+    - Value: 
 - Goal: The user should get a score.
-    - A tally is kept at the top of the screen. The answer is given out of the total number of questions that will be asked. 
+    - Response: A tally is kept at the top of the screen. The answer is given out of the total number of questions that will be asked. 
+    - Value: 
 
 I originally had a number of feedback statements after the user selected make an answer selection. The people who tried my game thought it wasn't necessary. Either they stopped paying attention to it, didn't care about it one way or another, or found it distracting. I decided to delete it. 
 

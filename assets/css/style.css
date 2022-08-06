@@ -155,3 +155,8 @@ footer {
 #start-over.hide {
     display: none;
 }
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0 auto;
+    }
+}

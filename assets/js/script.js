@@ -474,7 +474,7 @@ function emptyBeer() {
     } else if (wrongAnswers === 2) {
         questionText.innerHTML = "Game Over! You're on your way to being a expert. Play again to improve your score!";
     } else {
-        questionText.innerHTML = "Game Over! Thanks for playing!";
+        questionText.innerHTML = "Game Over! Keep playing to improve your score!";
     }
     startOver.classList.remove('hide');
     beginGameBtn.classList.add('hide'); 
